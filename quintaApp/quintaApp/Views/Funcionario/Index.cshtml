@@ -1,0 +1,37 @@
+﻿@model quintaApp.Models.Funcionario
+@{
+    ViewBag.Title = "Index";
+}
+<h2>Funcionário</h2>
+@*<form action="~/Funcionario/Listar" method="post">*@
+@using (Html.BeginForm("Listar", "Funcionario", FormMethod.Post))
+{
+    <fieldset>
+        <legend> Dados do Funcionário </legend>
+    </fieldset>
+
+    <div>
+        <label for="id"> Código</label>
+    </div>
+    <div>
+        @*<input type="number" value=" @Model.id" name="id" />*@
+        @Html.EditorFor(x => x.idFun)
+    </div>
+
+    <div>
+        <label for="nome"> Nome</label>
+    </div>
+    <div>
+        <input type="tel" value=" @Model.nomeFun" name="nome" />
+    </div>
+
+    <div>
+        <label for="funcao"> Função</label>
+    </div>
+    <div>
+        <input type="text" value=" @Model.funcaoFun" name="funcao" />
+    </div>
+    <br />
+    <input type="submit" value="Enviar" />
+}
+@*</form>*@

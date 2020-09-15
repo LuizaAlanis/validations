@@ -1,0 +1,13 @@
+﻿@model quintaApp.Models.Funcionario
+@{
+    ViewBag.Title = "Listar";
+}
+<h2>Listar</h2>
+<div>  <b>Id Funcionário</b> </div>
+<div>@Model.idFun</div>
+<div>  <b>Nome do Funcionário</b> </div>
+<div>@Model.nomeFun</div>
+<div>  <b>Função do Funcionário</b> </div>
+<div>@Model.funcaoFun</div>
+<br />
+@Html.ActionLink("Voltar", "Index", "Home")

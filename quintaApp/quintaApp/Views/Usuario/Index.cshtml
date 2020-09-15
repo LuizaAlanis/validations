@@ -1,0 +1,95 @@
+﻿@model quintaApp.Models.Usuario
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2> Validação de usuário </h2>
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+    
+<fieldset>
+
+    <legend> Dados do usuário </legend>
+
+    <div class="editor-label">
+        @Html.Label("idUsu","Id")
+    </div>
+    <div class="editor-label">
+        @Html.EditorFor(m => m.idUsu)
+        @Html.ValidationMessageFor(m => m.idUsu)
+    </div>
+
+
+    <div class="editor-label">
+        @Html.Label("nomeUsu", "Nome")
+    </div>
+    <div class="editor-label">
+        @Html.EditorFor(m => m.nomeUsu)
+        @Html.ValidationMessageFor(m => m.nomeUsu)
+    </div>
+
+
+    <div class="editor-label">
+        @Html.Label("nomeUsu", "Obs")
+    </div>
+    <div class="editor-label">
+        @Html.TextAreaFor(m => m.obsUsu)
+        @Html.ValidationMessageFor(m => m.obsUsu)
+    </div>
+
+
+    <div class="editor-label">
+        @Html.Label("nascUsu", "Data de nascimento")
+    </div>
+    <div class="editor-label">
+        @Html.EditorFor(m => m.nascUsu)
+        @Html.ValidationMessageFor(m => m.nascUsu)
+    </div>
+
+
+    <div class="editor-label">
+        @Html.Label("emailUsu", "Email")
+    </div>
+    <div class="editor-label">
+        @Html.EditorFor(m => m.emailUsu)
+        @Html.ValidationMessageFor(m => m.emailUsu)
+    </div>
+
+
+    <div class="editor-label">
+        @Html.Label("loginUsu", "Login")
+    </div>
+    <div class="editor-label">
+        @Html.EditorFor(m => m.loginUsu)
+        @Html.ValidationMessageFor(m => m.loginUsu)
+    </div>
+
+
+    <div class="editor-label">
+        @Html.Label("senhaUsu", "Senha")
+    </div>
+    <div class="editor-label">
+        @Html.PasswordFor(m => m.senhaUsu)
+        @Html.ValidationMessageFor(m => m.senhaUsu)
+    </div>
+
+
+    <div class="editor-label">
+        @Html.Label("confirmarUsu", "Confirmar senha")
+    </div>
+    <div class="editor-label">
+        @Html.PasswordFor(m => m.confirmarUsu)
+        @Html.ValidationMessageFor(m => m.confirmarUsu)
+    </div>
+
+    <br />
+
+    <p> <input type="submit" value="Cadastrar"/> </p>
+
+</fieldset>
+
+    @section Scripts{@Scripts.Render("~/bundles/jqueryval")}
+}
+

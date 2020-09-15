@@ -1,0 +1,77 @@
+﻿@model quintaApp.Models.Usuario
+@{
+    ViewBag.Title = "Resultado";
+}
+
+<h2> Listar Usuários </h2>
+
+<fieldset>
+    <legend> Usuário cadastrado </legend>
+
+    <div class="editor-label">
+        @Html.Label("idUsu","Id")
+    </div>
+    <div class="editor-field">
+        @Html.DisplayFor(m => m.idUsu)
+    </div>
+
+
+    <div class="editor-label">
+        @Html.Label("nomeUsu", "Nome")
+    </div>
+    <div class="editor-field">
+        @Html.DisplayFor(m => m.nomeUsu)
+    </div>
+
+
+    <div class="editor-label">
+        @Html.Label("obsUsu", "Obs")
+    </div>
+    <div class="editor-field">
+        @Html.DisplayFor(m => m.obsUsu)
+    </div>
+
+
+    <div class="editor-label">
+        @Html.Label("nascUsu", "Data de nascimento")
+    </div>
+    <div class="editor-field">
+        @Html.DisplayFor(m => m.nascUsu)
+    </div>
+
+
+    <div class="editor-label">
+        @Html.Label("emailUsu", "Email")
+    </div>
+    <div class="editor-field">
+        @Html.DisplayFor(m => m.emailUsu)
+    </div>
+
+
+    <div class="editor-label">
+        @Html.Label("loginUsu", "Login")
+    </div>
+    <div class="editor-field">
+        @Html.DisplayFor(m => m.loginUsu)
+    </div>
+
+    <div class="editor-label">
+        @Html.Label("senhaUsu", "Senha")
+    </div>
+    <div class="editor-field">
+        @Html.DisplayFor(m => m.senhaUsu)
+    </div>
+
+
+    <div class="editor-label">
+        @Html.Label("confirmarUsu", "Confirmar senha")
+    </div>
+    <div class="editor-field">
+        @Html.DisplayFor(m => m.confirmarUsu)
+    </div>
+
+    <br />
+    <p> @Html.ActionLink("Voltar","Index") </p>
+
+</fieldset>
+
